@@ -107,7 +107,7 @@ class TestPetShop(unittest.TestCase):
         sold = get_pets_sold(self.cc_pet_shop)
         self.assertEqual(2, sold)
 
-    @unittest.skip("delete this line to run the test")
+    # @unittest.skip("delete this line to run the test")
     def test_stock_count(self):
         count = get_stock_count(self.cc_pet_shop)
         self.assertEqual(6, count)
@@ -122,17 +122,17 @@ class TestPetShop(unittest.TestCase):
         pets = get_pets_by_breed(self.cc_pet_shop, "Dalmation")
         self.assertEqual(0, len(pets))
 
-    # @unittest.skip("delete this line to run the test")
+    @unittest.skip("delete this line to run the test")
     def test_find_pet_by_name__returns_pet(self):
         pet = find_pet_by_name(self.cc_pet_shop, "Arthur")
         self.assertEqual("Arthur", pet["name"])
 
-    @unittest.skip("delete this line to run the test")
+    # @unittest.skip("delete this line to run the test")
     def test_find_pet_by_name__returns_None(self):
         pet = find_pet_by_name(self.cc_pet_shop, "Fred")
         self.assertIsNone(pet)
 
-    @unittest.skip("delete this line to run the test")
+    # @unittest.skip("delete this line to run the test")
     def test_remove_pet_by_name(self):
         remove_pet_by_name(self.cc_pet_shop, "Arthur")
         pet = find_pet_by_name(self.cc_pet_shop,"Arthur")
@@ -144,7 +144,7 @@ class TestPetShop(unittest.TestCase):
         count = get_stock_count(self.cc_pet_shop)
         self.assertEqual(7, count)
 
-    @unittest.skip("delete this line to run the test")
+    # @unittest.skip("delete this line to run the test")
     def test_customer_cash(self):
         cash = get_customer_cash(self.customers[0])
         self.assertEqual(1000, cash)
@@ -160,7 +160,7 @@ class TestPetShop(unittest.TestCase):
         count = get_customer_pet_count(self.customers[0])
         self.assertEqual(0, count)
 
-    @unittest.skip("delete this line to run the test")
+    # @unittest.skip("delete this line to run the test")
     def test_add_pet_to_customer(self):
         customer = self.customers[0]
         add_pet_to_customer(customer, self.new_pet)
